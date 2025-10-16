@@ -182,7 +182,7 @@
     </nav>
     
     
-    <main class="container mx-auto px-4 py-16" role="main" aria-label="Main content, Science Subjects, Features and Tutor Showacase">
+    <main class="container mx-auto px-4 py-16" role="main" aria-label="Main content, Science Subjects, Features and Tutor Showcase">
       
         <div class="text-center mb-16 animate-slide-up">
             
@@ -390,7 +390,7 @@
             <div class="col-span-2 md:col-span-2 space-y-4">
                 <div class="flex items-center space-x-2">
                     <div class="w-10 h-10 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full flex items-center justify-center">
-                        <span class="text-white front-bold text-xl">AS</span>
+                        <span class="text-white font-bold text-xl">AS</span>
                         </div>
                         <h3 class="text-xl font-space font-bold text-gradient">All Science</h3>
                     </div>
@@ -404,38 +404,38 @@
     <div>
         <h4 class="text-lg font-space font-semibold mb-4 text-white">Quick Links</h4>
         <ul class="space-y-2 text-sm">
-            <li><a href="#" class="text-blue-200 hover:text-white transition-colours">Home</a></li>
-            <li><a href="#features" class="text-blue-200 hover:text-white transition-colours">Features</a></li>
-            <li><a href="#tutors" class="text-blue-200 hover:text-white transition-colours">Tutors</a></li>
-            <li><a href="#" class="text-blue-200 hover:text-white transition-colours">Courses</a></li>
+            <li><a href="#" class="text-blue-200 hover:text-white transition-colors">Home</a></li>
+            <li><a href="#features" class="text-blue-200 hover:text-white transition-colors">Features</a></li>
+            <li><a href="#tutors" class="text-blue-200 hover:text-white transition-colors">Tutors</a></li>
+            <li><a href="#" class="text-blue-200 hover:text-white transition-colors">Courses</a></li>
         </ul>
     </div>
     <div>
         <h4 class="text-lg font-space font-semibold mb-4 text-white">Resources</h4>
         <ul class="space-y-2 text-sm">
-            <li><a href="#" class="text-blue-200 hover:text-white transition-colours">Past Papers</a></li>
-            <li><a href="#" class="text-blue-200 hover:text-white transition-colours">GCSE Guides</a></li>
-            <li><a href="#" class="text-blue-200 hover:text-white transition-colours">A-level Guides</a></li>
-            <li><a href="#" class="text-blue-200 hover:text-white transition-colours">BTEC (Exam) Guides</a></li>
+            <li><a href="#" class="text-blue-200 hover:text-white transition-colors">Past Papers</a></li>
+            <li><a href="#" class="text-blue-200 hover:text-white transition-colors">GCSE Guides</a></li>
+            <li><a href="#" class="text-blue-200 hover:text-white transition-colors">A-level Guides</a></li>
+            <li><a href="#" class="text-blue-200 hover:text-white transition-colors">BTEC (Exam) Guides</a></li>
         </ul>
     </div>
     <div>
         <h4 class="text-lg font-space font-semibold mb-4 text-white">Support</h4>
         <ul class="space-y-2 text-sm">
-            <li><a href="#" class="text-blue-200 hover:text-white transition-colours">Contact Us</a></li>
-            <li><a href="#" class="text-blue-200 hover:text-white transition-colours">Privacy Policy</a></li>
-            <li><a href="#" class="text-blue-200 hover:text-white transition-colours">Terms of Service</a></li>
-            <li><a href="#" class="text-blue-200 hover:text-white transition-colours">FAQ</a></li>
+            <li><a href="#" class="text-blue-200 hover:text-white transition-colors">Contact Us</a></li>
+            <li><a href="#" class="text-blue-200 hover:text-white transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="text-blue-200 hover:text-white transition-colors">Terms of Service</a></li>
+            <li><a href="#" class="text-blue-200 hover:text-white transition-colors">FAQ</a></li>
         </ul>
     </div>
 </div>
-<div class="mt-12 pt-6 border-t border-white/10 text center">
+<div class="mt-12 pt-6 border-t border-white/10 text-center">
     <p class="text-sm text-blue-300">&copy; 2026 All Science. All Rights Reserved.</p>
 </div>
 </div>
 </footer>
 <button id="back-to-top" aria-label="Back to top" class="back-to-top fixed bottom-6 right-6 p-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full shadow-lg hover:shadow-lg hover:shadow-xl transition-all duration-300 z-50">
-    <svg xmlns="https://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
         <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18" />
     </svg>
 </button>
@@ -503,8 +503,10 @@
             }
         }
         backToTopButton.addEventListener('click', ()=> {
-            window.scrollTo({top: 0, behaviour: 'smooth'});
+            window.scrollTo({top: 0, behavior: 'smooth'});
         });
+        window.addEventListener('scroll', checkScroll);
+        checkScroll();
     </script>
 </body>
 </html>
