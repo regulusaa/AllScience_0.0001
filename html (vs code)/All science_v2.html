@@ -53,7 +53,7 @@
     </script>
     <style>
         .bg-gradient-animated {
-            background: linear-gradient(-45deg, black, black, black, black);
+            background: linear-gradient(-45deg, white, white, white, white);
             background-size: 400% 400%;
             animation: gradient 8s ease infinite;
         }
@@ -73,9 +73,10 @@
             position: absolute;
             width: 4px;
             height: 4px;
-            background: rgba(255, 255, 255, 0.5);
+            background: rgb(0, 0, 0);
             border-radius: 50%;
             animation: float 4s ease-in-out infinite; 
+            z-index: -1;
         }
         .science-card {
             position: relative;
@@ -127,7 +128,7 @@
         }
     </style>
 </head>
-<body class="bg-gradient-animated min-h-screen text-white font-inter overflow-x-hidden">
+<body class="bg-gradient-animated min-h-screen text-black font-inter overflow-x-hidden">
     <div class="fixed inset-0 pointer-events-none">
         <div class="particle" style="top: 20%; left: 10%; animation-delay: 0s;"></div>
         <div class="particle" style="top: 60%; left: 90%; animation-delay: 1s;"></div>
@@ -141,7 +142,7 @@
             <div class="flex flex-wrap justify-between items-center">
                 <div class="flex items-center space-x-2 animate-slide-in"> 
                     <div class="w-10 h-10 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full flex items-center justify-center"> 
-                        <span class="text-white font-bold text-xl">AS</span>
+                        <span class="text-black font-bold text-xl">AS</span>
                     </div>
                     <h1 class="text-3xl font-space font-bold text-gradient">All Science</h1> 
                 </div>
@@ -186,7 +187,7 @@
       
         <div class="text-center mb-16 animate-slide-up">
             
-            <blockquote class="text-xl md:text-2xl italic text-blue-200 mb-8 font-light leading-relaxed max-w-4xl mx-auto">
+            <blockquote class="text-xl md:text-2xl italic text-black mb-8 font-light leading-relaxed max-w-4xl mx-auto">
                 "Science is the pursuit of knowledge and understanding of the natural and social world through a systematic methodology based on evidence."
             </blockquote>
             
@@ -199,7 +200,7 @@
                 Welcome to All Science
             </h2>
          
-            <p class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+            <p class="text-xl md:text-2xl text-black max-w-3xl mx-auto leading-relaxed">
                 Your ultimate destination for developing your scientific knowledge and skills. Regardless of your level, All science is here to help you excel in your studies and beyond. 
             </p>
         </div>
@@ -211,8 +212,8 @@
                     <div class="w-20 h-20 bg-gradient-to-r from-[#5E0704] to-pink-500 rounded-2xl mx-auto mb-6 flex items-center justify-center text-4xl">
                         📊
                     </div>
-                    <h3 class="text-2xl font-space font-bold mb-4 text-white">Mathematics</h3>
-                    <p class="text-blue-200 leading-relaxed">
+                    <h3 class="text-2xl font-space font-bold mb-4 text-black">Mathematics</h3>
+                    <p class="text-black leading-relaxed">
                         Explore the world of numbers, equations, and mathematical theories. From basic arithmetic to advanced calculus, we cover it all.
                     </p>
 
@@ -228,8 +229,8 @@
                     <div class="w-20 h-20 bg-gradient-to-r from-[#13389D] to-[#13389D] rounded-2xl mx-auto mb-6 flex items-center justify-center text-4xl">
                         🧪
                     </div>
-                    <h3 class="text-2xl font-space font-bold mb-4 text-white">Chemistry</h3>
-                    <p class="text-blue-200 leading-relaxed">
+                    <h3 class="text-2xl font-space font-bold mb-4 text-black">Chemistry</h3>
+                    <p class="text-black leading-relaxed">
                         Dive into the world of atoms, molecules, and chemical reactions. Learn about the periodic table, organic chemistry, and more.
                     </p>
                     <button class="mt-6 px-6 py-3 bg-gradient-to-r from-[#13389D] to-[#13389D] rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
@@ -242,8 +243,8 @@
                     <div class="w-20 h-20 bg-gradient-to-r from-[#3E094F] to-[#3E094F] rounded-2xl mx-auto mb-6 flex items-center justify-center text-4xl">
                         ⚛️
                     </div>
-                    <h3 class="text-2xl font-space font-bold mb-4 text-white">Physics</h3>
-                    <p class="text-blue-200 leading-relaxed">
+                    <h3 class="text-2xl font-space font-bold mb-4 text-black">Physics</h3>
+                    <p class="text-black leading-relaxed">
                         Understand the fundamental principles of the universe, from classical mechanics to quantum physics. Explore the laws of motion, energy, and forces.
                     </p>
                     <button class="mt-6 px-6 py-3 bg-gradient-to-r from-[#3E094F] to-[#3E094F] rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
@@ -256,8 +257,8 @@
                     <div class="w-20 h-20 bg-gradient-to-r from-[#005043] to-[#005043] rounded-2xl mx-auto mb-6 flex items-center justify-center text-4xl">
                         🧬
                     </div>
-                    <h3 class="text-2xl font-space font-bold mb-4 text-white">Biology</h3>
-                    <p class="text-blue-200 leading-relaxed">
+                    <h3 class="text-2xl font-space font-bold mb-4 text-black">Biology</h3>
+                    <p class="text-black leading-relaxed">
                         Explore the wonders of life, from cellular biology to ecosystems. Learn about genetics, evolution, and the diversity of living organisms.
                     </p>
                     <button class="mt-6 px-6 py-3 bg-gradient-to-r from-[#005043] to-[#005043] rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
@@ -272,8 +273,8 @@
                     <div class="w-20 h-20 bg-gradient-to-r from-gray-400 to-blue-500 rounded-2xl mx-auto mb-6 flex items-center justify-center text-4xl">
                         ⚙️
                     </div>
-                    <h3 class="text-2xl font-space font-bold mb-4 text-white">Engineering</h3>
-                    <p class="text-blue-200 leading-relaxed">
+                    <h3 class="text-2xl font-space font-bold mb-4 text-black">Engineering</h3>
+                    <p class="text-black leading-relaxed">
                         Explore the principles of design, construction, and innovation. From civil structures to software systems, discover how ideas become reality.
                     </p>
                     <button class="mt-6 px-6 py-3 bg-gradient-to-r from-gray-400 to-blue-500 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
@@ -286,8 +287,8 @@
                     <div class="w-20 h-20 bg-gradient-to-r from-[#87CEEB] to-[#87CEEB] rounded-2xl mx-auto mb-6 flex items-center justify-center text-4xl">
                         💻
                     </div>
-                    <h3 class="text-2xl font-space font-bold mb-4 text-white">Computer Science</h3>
-                    <p class="text-blue-200 leading-relaxed">
+                    <h3 class="text-2xl font-space font-bold mb-4 text-black">Computer Science</h3>
+                    <p class="text-black leading-relaxed">
                         Delve into the world of algorithms, programming, and data structures. Learn how computers work and how to create software that solves real-world problems.
                     </p>
                     <button class="mt-6 px-6 py-3 bg-gradient-to-r from-[#87CEEB] to-[#87CEEB] rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
@@ -302,7 +303,7 @@
             <h2 class="text-4xl md:text-5xl font-space font-bold mb-4 text-gradient">
                 Unlock Your Potential
             </h2>
-            <p class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
+            <p class="text-xl md:text-2xl text-black max-w-3xl mx-auto">
                 A collection of tools and resources to help you master STEM and achieve your academic goals.
             </p>
         </div>
@@ -312,8 +313,8 @@
                     <div class="w-20 h-20 bg-gradient-to-r from-pink-400 to-purple-500 rounded-2xl mx-auto mb-6 flex items-center justify-center text-4xl">
                         🃏
                     </div>
-                    <h3 class="text-2xl font-space font-bold mb-4 text-white">Interactive Flashcards</h3>
-                    <p class="text-blue-200 leading-relaxed">
+                    <h3 class="text-2xl font-space font-bold mb-4 text-black">Interactive Flashcards</h3>
+                    <p class="text-black leading-relaxed">
                         Reinforce key concepts and memorise definitions with customisable flashcards. Perfect for cramming or active recall.
                     </p>
                     <button class="mt-6 px-6 py-3 bg-gradient-to-r from-pink-400 to-purple-500 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
@@ -326,8 +327,8 @@
                     <div class="w-20 h-20 bg-gradient-to-r from-yellow-400 to-red-500 rounded-2xl mx-auto mb-6 flex items-center justify-center text-4xl">
                         ✍️
                     </div>
-                    <h3 class="text-2xl font-space font-bold mb-4 text-white">Quizzes and Mini tests</h3>
-                    <p class="text-blue-200 leading-relaxed">
+                    <h3 class="text-2xl font-space font-bold mb-4 text-black">Quizzes and Mini tests</h3>
+                    <p class="text-black leading-relaxed">
                         Test your knowledge with comprehensive quizzes and mini tests. Use these tailored results to identify areas for improvement and track your progress.
                     </p>
                     <button class="mt-6 px-6 py-3 bg-gradient-to-r from-yellow-400 to-red-500 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
@@ -342,7 +343,7 @@
                 <h2 class="text-4xl md:text-5xl font-space font-bold mb-4 text-gradient">
                     Accelerate Your Progress with Verified Experts
                 </h2>
-                <p class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
+                <p class="text-xl md:text-2xl text-black max-w-3xl mx-auto">
                     Connect with expert tutors to get personalized support and achieve your academic goals.
                 </p>
             </div>
@@ -355,7 +356,7 @@
                         <h3 class="text-3xl font-space font-bold mb-4 text-gradient">
                             Why Choose a Tutor?
                         </h3>
-                        <ul class="list-none space-y-4 text-blue-100 leading-relaxed">
+                        <ul class="list-none space-y-4 text-black leading-relaxed">
                             <li class="flex items-start">
                                 <span class="text-yellow-400 mr-3 text-2xl">💡</span>
                                 <p class="flex-1">
@@ -390,38 +391,38 @@
             <div class="col-span-2 md:col-span-2 space-y-4">
                 <div class="flex items-center space-x-2">
                     <div class="w-10 h-10 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full flex items-center justify-center">
-                        <span class="text-white font-bold text-xl">AS</span>
+                        <span class="text-black font-bold text-xl">AS</span>
                     </div>
-                    <p class="text-sm text-blue-200 max-w-xs">
+                    <p class="text-sm text-black max-w-xs">
                         The Ultimate destination for STEM learning, offering comprehnsiive courses, resources, and tutoring from experts for all academics levels.
                     </p>
                 </div>
             </div>
         <div>
-            <h4 class="text-lg font-space font-semibold mb-4 text-white">Quick Links</h4>
+            <h4 class="text-lg font-space font-semibold mb-4 text-black">Quick Links</h4>
             <ul class="space-y-2 text-sm">
-                <li><a href="#" class="text-blue-200 hover:text-white transition-colors">Home</a></li>
-                <li><a href="#features" class="text-blue-200 hover:text-white transition-colors">Features</a></li>
-                <li><a href="#tutors" class="text-blue-200 hover:text-white transition-colors">Tutors</a></li>
-                <li><a href="#" class="text-blue-200 hover:text-white transition-colors">Courses</a></li>
+                <li><a href="#" class="text-black hover:text-black transition-colors">Home</a></li>
+                <li><a href="#features" class="text-black hover:text-black transition-colors">Features</a></li>
+                <li><a href="#tutors" class="text-black hover:text-black transition-colors">Tutors</a></li>
+                <li><a href="#" class="text-black hover:text-black transition-colors">Courses</a></li>
             </ul>
         </div>
     <div>
-        <h4 class="text-lg font-space font-semibold mb-4 text-white">Resources</h4>
+        <h4 class="text-lg font-space font-semibold mb-4 text-black">Resources</h4>
         <ul class="space-y-2 text-sm">
-            <li><a href="#" class="text-blue-200 hover:text-white transition-colors">Past Papers</a></li>
-            <li><a href="#" class="text-blue-200 hover:text-white transition-colors">GCSE Guides</a></li>
-            <li><a href="#" class="text-blue-200 hover:text-white transition-colors">A-level Guides</a></li>
-            <li><a href="#" class="text-blue-200 hover:text-white transition-colors">BTEC (Exam) Guides</a></li>
+            <li><a href="#" class="text-black hover:text-black transition-colors">Past Papers</a></li>
+            <li><a href="#" class="text-black hover:text-black transition-colors">GCSE Guides</a></li>
+            <li><a href="#" class="text-black hover:text-black transition-colors">A-level Guides</a></li>
+            <li><a href="#" class="text-black hover:text-black transition-colors">BTEC (Exam) Guides</a></li>
         </ul>
     </div>
     <div>
-        <h4 class="text-lg font-space font-semibold mb-4 text-white">Support</h4>
+        <h4 class="text-lg font-space font-semibold mb-4 text-black">Support</h4>
         <ul class="space-y-2 text-sm">
-            <li><a href="#" class="text-blue-200 hover:text-white transition-colors">Contact Us</a></li>
-            <li><a href="#" class="text-blue-200 hover:text-white transition-colors">Privacy Policy</a></li>
-            <li><a href="#" class="text-blue-200 hover:text-white transition-colors">Terms of Service</a></li>
-            <li><a href="#" class="text-blue-200 hover:text-white transition-colors">FAQ</a></li>
+            <li><a href="#" class="text-black hover:text-black transition-colors">Contact Us</a></li>
+            <li><a href="#" class="text-black hover:text-black transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="text-black hover:text-black transition-colors">Terms of Service</a></li>
+            <li><a href="#" class="text-black hover:text-black transition-colors">FAQ</a></li>
         </ul>
     </div>
 </div>
@@ -430,7 +431,7 @@
 </div>
 </div>
 </footer>
-<button id="back-to-top" aria-label="Back to top" class="back-to-top fixed bottom-6 right-6 p-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full shadow-lg hover:shadow-lg hover:shadow-xl transition-all duration-300 z-50">
+<button id="back-to-top" aria-label="Back to top" class="back-to-top fixed bottom-6 right-6 p-3 bg-gradient-to-r from-blue-500 to-purple-600 text-black rounded-full shadow-lg hover:shadow-lg hover:shadow-xl transition-all duration-300 z-50">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
         <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18" />
     </svg>
