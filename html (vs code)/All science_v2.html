@@ -58,9 +58,9 @@
             animation: gradient 8s ease infinite;
         }
         .glass-effect {
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.2);
+            background-color: #D3D3D3;
+            backdrop-filter: none;
+            border: 1px solid #C0C0C0;
         }
         .hover-lift {
             transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -130,20 +130,21 @@
 </head>
 <body class="bg-gradient-animated min-h-screen text-black font-inter overflow-x-hidden">
     <div class="fixed inset-0 pointer-events-none">
-        <div class="particle" style="top: 20%; left: 10%; animation-delay: 0s;"></div>
-        <div class="particle" style="top: 60%; left: 90%; animation-delay: 1s;"></div>
-        <div class="particle" style="top: 40%; left: 70%; animation-delay: 2s;"></div>
-        <div class="particle" style="top: 80%; left: 30%; animation-delay: 3s;"></div>
-        <div class="particle" style="top: 10%; left: 50%; animation-delay: 4s;"></div>
+        <div class="particle" style="top: 85%; left: 5%; animation-delay: 0.1s;"></div>
+        <div class="particle" style="top: 15%; left: 70%; animation-delay: 1.5s;"></div>
+        <div class="particle" style="top: 40%; left: 25%; animation-delay: 3.2s;"></div>
+        <div class="particle" style="top: 70%; left: 85%; animation-delay: 4.8s;"></div>
+        <div class="particle" style="top: 5%; left: 45%; animation-delay: 2.1s;"></div>
+        <div class="particle" style="top: 20%; left: 95%; animation-delay: 3.9s;"></div>
+        <div class="particle" style="top: 95%; left: 60%; animation-delay: 2.7s;"></div>
+        <div class="particle" style="top: 30%; left: 5%; animation-delay: 0.5s;"></div>
     </div>
     
     <nav class="relative z-50 p-4 glass-effect">
         <div class="container mx-auto">
             <div class="flex flex-wrap justify-between items-center">
                 <div class="flex items-center space-x-2 animate-slide-in"> 
-                    <div class="w-10 h-10 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full flex items-center justify-center"> 
-                        <span class="text-black font-bold text-xl">AS</span>
-                    </div>
+                    <img src="Assets2/transparent spark for logo.png" alt="All Science Logo" style="width: 80px; height: 80px;" class="w-10 h-10 object-contain">
                     <h1 class="text-3xl font-space font-bold text-gradient">All Science</h1> 
                 </div>
 
