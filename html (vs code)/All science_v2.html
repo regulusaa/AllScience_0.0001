@@ -52,6 +52,44 @@
         }
     </script>
     <style>
+        .text-navy { color: #1F2B44}
+        .bg-navy { background-color: #1F2B44; }
+        .glass-effect {
+            background-color: #D3D3D3;
+            border: 1px solid #C0C0C0;
+        }
+        .hover-lift { transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+        .hover-lift:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        .nav-link { position: relative; transition: all 0.3s ease; }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #1F2B44;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after { width: 100%; }
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(31, 43, 68, 0.2);
+            border-radius: 50%;
+            animation: float 4s ease-in-out infinite;
+            z-index: -1;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px);}
+            50% { transform: translateY(-20px);}
+        }
+        .back-to-top { transition: opacity 0.3s, transform 0.3s; }
+        .back-to-top:not(.show) { opacity: 0; pointer-events: none; transform: translateY(20px); }
         .text-navy {
             color: #1F2B44
         }
@@ -141,13 +179,12 @@
         <div class="particle" style="top: 20%; left: 95%; animation-delay: 3.9s;"></div>
         <div class="particle" style="top: 95%; left: 60%; animation-delay: 2.7s;"></div>
         <div class="particle" style="top: 30%; left: 5%; animation-delay: 0.5s;"></div>
-    </div>
-    
-    <nav class="relative z-50 py-4 p1-0 pr-4 glass-effect">
+    </div>    
+    <nav class="relative z-50 py-4 pl-0 pr-4 glass-effect">
         <div class="container mx-auto">
             <div class="max-w-full flex justify-between items-center">
                 <div class="flex items-center animate-slide-in"> 
-                    <img src="Assets2/transparent spark for logo.png" alt="All Science Logo" style="width: 100px; height: 100px;" class="object-contain -m1-8 -mr-4">
+                    <img src="Assets2/transparent spark for logo.png" alt="All Science Logo" style="width: 100px; height: 100px;" class="object-contain -ml-8 -mr-4">
                     <h1 class="text-3xl font-space font-bold text-navy whitespace-nowrap">All Science</h1> 
                 </div>
 
@@ -162,15 +199,80 @@
                 <div class="hidden md:flex space-x-1 animate-slide-in" style="animation-delay: 0.2s;"> 
                     <a href="#" class="nav-link px-4 py-2 rounded-lg hover:bg-white/10 transition-all duration-300">Home</a>
                     <a href="#" class="nav-link px-4 py-2 rounded-lg hover:bg-white/10 transition-all duration-300">Courses</a>
-                    <a href="#" class="nav-link px-4 py-2 rounded-lg hover:bg-white/10 transition-all duration-300">Past Papers</a>
-                    <a href="#" class="nav-link px-4 py-2 rounded-lg hover:bg-white/10 transition-all duration-300">GCSE</a>
-                    <a href="#" class="nav-link px-4 py-2 rounded-lg hover:bg-white/10 transition-all duration-300">A-Level</a>
-                    <a href="#" class="nav-link px-4 py-2 rounded-lg hover:bg-white/10 transition-all duration-300">BTEC</a>
+                    <div class="relative group">
+                        <button class="nav-link px-4 py-2 rounded-lg hover:bg-white/10 transition-all flex items-center">
+                            Past Papers
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="absolute left-0 mt-0 w-48 bg-white rounded-xl shadow-xl border border-gray-100 hidden group-hover:block z-50 py-2">
+                            <a href="#" class="block px-4 py-2 text-sm text-navy hover:bg-gray-50">Mathematics</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-navy hover:bg-gray-50">Chemistry</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-navy hover:bg-gray-50">Physics</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-navy hover:bg-gray-50">Biology</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-navy hover:bg-gray-50">Engineering</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-navy hover:bg-gray-50">Computer Science</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <button class="nav-link px-4 py-2 rounded-lg hover:bg-white/10 transition-all flex items-center">
+                            GCSE
+                          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg> 
+                        </button>
+                        <div class="absolute left-0 mt-0 w-48 bg-white rounded-xl shadow-xl border border-gray-100 hidden group-hover:block z-50 py-2">
+                            <a href="#" class="block px-4 py-2 text-sm text-navy hover:bg-gray-50">Mathematics</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-navy hover:bg-gray-50">Chemistry</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-navy hover:bg-gray-50">Physics</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-navy hover:bg-gray-50">Biology</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-navy hover:bg-gray-50">Engineering</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-navy hover:bg-gray-50">Computer Science</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <button class="nav-link px-4 py-2 rounded-lg hover:bg-white/10 transition-all flex items-center">
+                            A-Level
+                          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg> 
+                        </button>
+                        <div class="absolute left-0 mt-0 w-48 bg-white rounded-xl shadow-xl border border-gray-100 hidden group-hover:block z-50 py-2">
+                            <a href="#" class="block px-4 py-2 text-sm text-navy hover:bg-gray-50">Mathematics</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-navy hover:bg-gray-50">Chemistry</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-navy hover:bg-gray-50">Physics</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-navy hover:bg-gray-50">Biology</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-navy hover:bg-gray-50">Engineering</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-navy hover:bg-gray-50">Computer Science</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <button class="nav-link px-4 py-2 rounded-lg hover:bg-white/10 transition-all flex items-center">
+                            BTEC
+                          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg> 
+                        </button>
+                        <div class="absolute left-0 mt-0 w-48 bg-white rounded-xl shadow-xl border border-gray-100 hidden group-hover:block z-50 py-2">
+                            <a href="#" class="block px-4 py-2 text-sm text-navy hover:bg-gray-50">Applied Mathematics</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-navy hover:bg-gray-50">Applied Science</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-navy hover:bg-gray-50">BTEC Computer Science</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-navy hover:bg-gray-50">BTEC Engineering</a>
+                        </div>
+                    </div>
                     <a href="#" class="nav-link px-4 py-2 rounded-lg hover:bg-white/10 transition-all duration-300">University</a>
                     <a href="#" class="nav-link px-4 py-2 rounded-lg hover:bg-white/10 transition-all duration-300">Tutors</a> 
-                    <a href="#" class="nav-link px-4 py-2 rounded-lg hover:bg-white/10 transition-all duration-300">Contact</a> 
+                    <div class="relative group">
+                        <button class="nav-link px-4 py-2 rounded-lg hover:bg-white/10 transition-all flex items-center">
+                            Contact
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="absolute right-0 mt-0 w-48 bg-white rounded-xl shadow-xl border border-gray-100 hidden group-hover:block z-50 py-2">
+                            <a href="#" class="block px-4 py-2 text-sm text-navy hover:bg-gray-50">Contact Us</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-navy hover:bg-gray-50 font-semibold">devChat</a>
+                        </div>
+                    </div>
                 </div>
-            </div> 
+            <button id="menu-toggle" class="md:hidden p-2 rounded-lg glass-effect hover:bg-white/20 transition-all duration-300">
+                <div class="w-6 h-6 flex flex-col justify-center items-center">
+                    <span class="w-full h-0.5 bg-white mb-1 transition-all duration-300 transform origin-center" id="line1"></span>
+                    <span class="w-full h-0.5 bg-white mb-1 transition-all duration-300" id="line2"></span>
+                    <span class="w-full h-0.5 bg-white mb-1 transition-all duration-300 transform origin-center" id="line3"></span>
+                </div>
+            </button>
 
             <div id="mobile-menu" class="md:hidden mt-4 space-y-2 hidden">
                 <a href="#" class="block px-4 py-3 rounded-lg glass-effect hover:bg-white/20 transition-all duration-300">Home</a> 
@@ -337,7 +439,7 @@
             </div>
             <div class="flex flex-col md:flex-row items-center justify-center md:space-x-12 animate-slide-up" style="animation-delay: 1.1s;">
                 <div class="w-full md:w-1/2 mb-8 md:mb-0">
-                    <img src="https://placehold.co/600x400/1E2129/3E094F?text=Expert+Tutor" alt="An expert tutor guiding a student." class="w-full h-auto object-cover rounded-2xl shadow-x1" />
+                    <img src="https://placehold.co/600x400/1E2129/3E094F?text=Expert+Tutor" alt="An expert tutor guiding a student." class="w-full h-auto object-cover rounded-2xl shadow-xl" />
                 </div>
                 <div class="w-full md:w-1/2">
                     <div class="glass-effect p-8 rounded-2xl hover-lift">
@@ -373,7 +475,7 @@
         </section>
         
     </main>
-<footer class="glass-effect mt-16 py-12 border-t border-white/10" role="contentinfo">
+<footer class="relative z-10 glass-effect mt-16 py-12 border-t border-white/10" role="contentinfo">
     <div class="container mx-auto px-4">
         <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
             <div class="col-span-2 md:col-span-2 space-y-4">
@@ -419,13 +521,12 @@
 </div>
 </div>
 </footer>
-<button id="back-to-top" aria-label="Back to top" class="back-to-top fixed bottom-6 right-6 p-3 bg-[#1F2B44]text-white rounded-full shadow-lg z-50">
+<button id="back-to-top" aria-label="Back to top" class="back-to-top fixed bottom-6 right-6 p-3 bg-[#1F2B44] text-white rounded-full shadow-lg z-50">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
         <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18" />
     </svg>
 </button>
     <script>
-
         const menuToggle = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
         const line1 = document.getElementById('line1');
