@@ -473,8 +473,27 @@
                 </div>
             </div>
         </section>
-        
     </main>
+    <div id="auth-modal" class="modal-overlay">
+        <div class="bg-white p-8 rounded-3xl shadow-2xl w-full max-w-md animate-slide-up">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-space font-bold text-navy">Welcome Back</h3>
+                <button id="close-modal" class="text-gray-400 hover:text-black text-3xl font-bold">&times;</button>
+            </div>
+            <p class="text-gray-600 mb-8">Sign in to sync your progress and access exclusive courses</p>
+            <div class="space-y-4">
+                <button id="google-signin" class="w-full flex items-center justify-center space-x-3 px-4 py-3 border border-gray-200 rounded-xl hover:bg-gray-50 transition-all">
+                    <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" width="20" height="20">
+                    <span class="font-medium">Continue with Google</span>
+                </button>
+                <button id="apple-signin" class="w-full flex items-center justify-center space-x-3 px-4 py-3 bg-black text-white rounded-xl hover:bg-gray-800 transition-all">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox=" 0 0 24 24"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.51 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935.987 1.831 0 2.35.987 3.96.948 1.637-0.26 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.0.26-3.04 2.48-4.494 2.697-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.2-07.052-2.662.805-3.532 1.82-.78.897-1.454 2.338-1.273 3.714 1.338.104 2.715-.668 3.559-1.704z"/></svg>
+                    <span class="font-medium">Continue with Apple</span>
+                </button>
+            </div>
+            <p class="mt-8 text-xs text-center text-gray-400">By continuing, you agree to All Science Terms and Privacy Policy</p>
+        </div>
+    </div>
 <footer class="relative z-10 glass-effect mt-16 py-12 border-t border-white/10" role="contentinfo">
     <div class="container mx-auto px-4">
         <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
@@ -526,6 +545,19 @@
         <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18" />
     </svg>
 </button>
+<script type="module">
+    import { initialiseApp } from "https://ww.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getAuth, GoogleAuthProvider, signInwithPopup } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+
+    const firebaseConfig = {
+        apiKey:
+        authDomain:
+        projectId:
+        storageBucket:
+        messagingSenderId:
+        appId:
+    };
+</script>
     <script>
         const menuToggle = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
