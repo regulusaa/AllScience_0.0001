@@ -1,9 +1,7 @@
-# All Science
-This is a website that people may use to revise for the Science subjects in addition to Engineering
+# All Science — early prototype
 
-# Revision app --> this is my first CSS/HTML/JAVA project 
+An early version of a science revision website. It explores a simple set of pages for subjects including biology, chemistry, physics, and maths.
 
-Updates should be daily, and around 5-10 updates per day
-After release on February 16th 2026, I would be delighted for any suggested improvements that I could make 
+This is a frontend prototype built with HTML and CSS. Some pages are unfinished or empty. The newer, more complete project lives in the separate `all-science` repository.
 
-Only frontend changes have been made so far
+To look around, open `html (vs code)/All science_v2.html` in a browser.
